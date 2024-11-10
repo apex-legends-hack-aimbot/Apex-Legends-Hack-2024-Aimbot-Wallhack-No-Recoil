@@ -1,0 +1,52 @@
+name: Apex Hack 2024 Auto Update
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: "*/60 * * * *"  
+
+jobs:
+  auto_commit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+
+      - name: Modify Apex Hack Flow File
+        run: |
+          d='DATE '`date '+%Y-%m-%d %H:%M:%S'`
+          echo $d >> FLOW
+
+      - name: Commit changes to FLOW
+        run: |
+          git config --local user.email "Apex-hack-2024@rambler.ru"
+          git config --local user.name "Apex Legends Hack Aimbot"
+          git add FLOW
+          
+          arr[0]="Apex Hack Flow Updated"
+          arr[1]="Flow Log: Apex update"
+          arr[2]="System Check: Apex Hack Flow"
+          arr[3]="Apex Hack - flow refresh"
+          arr[4]="Hack detected! Flow updated"
+          arr[5]="Apex Hack operation confirmed"
+          arr[6]="Apex Hack 2024: Flow updated"
+          arr[7]="Flow refreshed for Apex Hack"
+          arr[8]="Update: Apex Hack successful"
+          arr[9]="Apex Hack running smoothly"
+
+          rand=$[$RANDOM % ${#arr[@]}]
+          
+          git commit -m "${arr[$rand]}"
+
+      - name: Push Changes to Repository
+        uses: ad-m/github-push-action@master
+        with:
+          force: true
+          directory: "."
+          github_token: ${{ secrets.GITHUB_TOKEN }}
