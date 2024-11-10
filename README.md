@@ -2,7 +2,7 @@
   <h1>Apex Legends Hack 2024 | Aimbot | Wallhack | No Recoil</h1>
 
   [![Downloads](https://img.shields.io/badge/Downloads-30k%2B-blue?style=for-the-badge&logo=download&logoColor=white)](#)
-  [![Version](https://img.shields.io/badge/Version-3.0-green?style=for-the-badge)](#)
+  [![Version](https://img.shields.io/badge/Version-2.1-green?style=for-the-badge)](#)
   [![Rating](https://img.shields.io/badge/Rating-5%20Stars-Gold?style=for-the-badge)](#)
 </div>
 
